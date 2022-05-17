@@ -1,6 +1,6 @@
 import React from "react";
 
-const InfoCard = ({img}) => {
+const InfoCard = ({img,cardTitle}) => {
   return (
     <div>
       <div class="card lg:card-side bg-accent text-white shadow-xl">
@@ -11,7 +11,7 @@ const InfoCard = ({img}) => {
           />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">New album is released!</h2>
+          <h2 class="card-title">{cardTitle}</h2>
           <p>Click the button to listen on Spotiwhy app.</p>
          
         </div>
