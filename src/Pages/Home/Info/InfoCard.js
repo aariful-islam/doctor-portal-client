@@ -1,9 +1,9 @@
 import React from "react";
 
-const InfoCard = ({img,cardTitle,description}) => {
+const InfoCard = ({img,cardTitle,description,bg}) => {
   return (
     <div>
-      <div class="card lg:card-side bg-accent text-white shadow-xl">
+      <div class={`card lg:card-side text-white shadow-xl ${bg}`} >
         <figure>
           <img
             src={img}
@@ -19,5 +19,5 @@ const InfoCard = ({img,cardTitle,description}) => {
     </div>
   );
 };
-
+ 
 export default InfoCard;
