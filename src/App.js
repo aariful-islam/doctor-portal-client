@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Registration from './Pages/Login/Registration/Registration';
 import Reviews from './Pages/Reviews/Reviews';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
 
         
       </Routes>
+
+      <Footer></Footer>
       
     </div>
   );
