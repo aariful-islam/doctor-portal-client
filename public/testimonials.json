@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Arif",
+        
+        "description": "They provide excellent service. I love their service. They provide service at very cheap cost. I can say they provide cheap and best services.",
+        "img": "images/people1.png"
+    },
+    {
+        "id": 2,
+        "name": "Merry",
+       
+        "description": "They provide excellent service.I love their service. They provide service at very cheap cost. I can say they provide cheap and best services.",
+        "img": "images/people2.png"
+    },
+    {
+        "id": 3,
+        "name": "Cherry",
+        
+        "description": "They provide excellent service.I love their service. They provide service at very cheap cost. I can say they provide cheap and best services.",
+        "img": "images/people3.png"
+    }
+   
+]

@@ -6,6 +6,7 @@ const InfoCard = ({img,cardTitle,description,bg}) => {
       <div class={`m-4 card lg:card-side text-white shadow-xl ${bg}`} >
         <figure>
           <img
+          className="p-2"
             src={img}
             alt="Album"
           />
