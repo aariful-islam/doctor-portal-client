@@ -30,34 +30,37 @@ const Header = () => {
               <li>
                 <a href="/home">Home</a>
               </li>
-              <li tabindex="0">
-                <a class="justify-between">
-                  Parent
-                  <svg
-                    class="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                  </svg>
-                </a>
-                <ul class="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+              
+              <li>
+                <Link as={Link} to="/about">
+                  About
+                </Link>
               </li>
               <li>
-                <Link as={Link} to="/about">About</Link>
+                <Link as={Link} to="/appointment">
+                  Appointment
+                </Link>
+              </li>
+              <li>
+                <Link as={Link} to="/about">
+                  Reviews
+                </Link>
+              </li>
+              <li>
+                <Link as={Link} to="/about">
+                  Contact us
+                </Link>
+              </li>
+              <li>
+                <Link as={Link} to="/about">
+                  Login
+                </Link>
               </li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link as={Link} to="/home" class="btn btn-ghost normal-case text-xl">
+            Dcotr portal
+          </Link>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
@@ -66,35 +69,41 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            {/* <li tabindex="0">
-              <Link>
-                Parent
-                <svg
-                  class="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </Link>
-              <ul class="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li> */}
+          
             <li>
-                <Link as={Link} to="/about">About</Link>
-              </li>
+              <Link as={Link} to="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link as={Link} to="/appointment">
+                Appointment
+              </Link>
+            </li>
+            <li>
+              <Link as={Link} to="/reviews">
+                Reviews
+              </Link>
+            </li>
+            <li>
+              <Link as={Link} to="/contact">
+                Contact us
+              </Link>
+            </li>
+            {/* <li>
+              <Link as={Link} to="/about">
+                Login
+              </Link>
+            </li> */}
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn">Get started</a>
+        
+              <Link className="btn btn-primary" as={Link} to="/login">
+                Login
+              </Link>
+          
+          
         </div>
       </div>
     </div>
