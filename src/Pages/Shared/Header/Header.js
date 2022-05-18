@@ -37,7 +37,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link as={Link} to="/appointment">
+                <Link as={Link} to="/makeappointment">
                   Appointment
                 </Link>
               </li>
@@ -76,7 +76,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link as={Link} to="/appointment">
+              <Link as={Link} to="/makeappointment">
                 Appointment
               </Link>
             </li>
