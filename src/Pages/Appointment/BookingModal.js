@@ -1,17 +1,44 @@
 import React from "react";
 import { format } from "date-fns";
 const BookingModal = ({ treatment, date,setTreatment }) => {
-  const { name, slots } = treatment
+  const {_id, name, slots } = treatment
+  const formatedDate = format(date,'pp')
   const handleBooking=e=>{
     e.preventDefault();
     const slot=e.target.slot.value;
      const email=e.target.email.value;
      const name=e.target.name.value;
      const phone =e.target.phone.value
-     console.log(slot,name,phone,email)
+     const booking ={
+       
+       treatmentId:_id,
+       treatment:name,
+       date:formatedDate,
+       slot,
+       patient:email,
+       patientName:name,
+       phone:phone
+
+     }
+     fetch('http://localhost:4000/booking', {
+    method:'POST',
+    headers:{
+      'content-type':'application/json'
+    },
+    body:JSON.stringify(booking)
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    alert('added succesfully')
+    console.log(data);
+  })
+
+
      setTreatment(null)
      
   }
+  
+
 
   return (
     <div>
