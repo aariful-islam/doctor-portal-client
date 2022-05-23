@@ -8,7 +8,7 @@ const Header = () => {
   const [user] = useAuthState(auth);
 
   const logout = () => {
-      signOut(auth);
+    signOut(auth);
   };
 
   return (
@@ -39,7 +39,7 @@ const Header = () => {
               <li>
                 <a href="/home">Home</a>
               </li>
-              
+
               <li>
                 <Link as={Link} to="/about">
                   About
@@ -61,6 +61,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
+                <Link as={Link} to="/dashboard">
+                  Dashboard
+                </Link>
+              </li>
+              <li>
                 <Link as={Link} to="/about">
                   Login
                 </Link>
@@ -78,7 +83,7 @@ const Header = () => {
                 Home
               </Link>
             </li>
-          
+
             <li>
               <Link as={Link} to="/about">
                 About
@@ -99,6 +104,11 @@ const Header = () => {
                 Contact us
               </Link>
             </li>
+            <li>
+              <Link as={Link} to="/dashboard">
+                Dashboard
+              </Link>
+            </li>
             {/* <li>
               <Link as={Link} to="/about">
                 Login
@@ -107,9 +117,24 @@ const Header = () => {
           </ul>
         </div>
         <div class="navbar-end">
-        
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
-          
+
+          <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+          <label tabindex="1" for="dashboard-sidebar" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
           
         </div>
       </div>

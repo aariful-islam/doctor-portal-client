@@ -3,6 +3,9 @@ import './App.css';
 import About from './Pages/About/About';
 import MakeAppointment from './Pages/Appointment/MakeAppointment';
 import Contact from './Pages/Contact/Contact';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyAppointment from './Pages/Dashboard/MyAppointment';
+import Myreview from './Pages/Dashboard/Myreview';
 import Home from './Pages/Home/Home/Home';
 
 import Login from './Pages/Login/Login/Login';
@@ -26,6 +29,10 @@ function App() {
         <Route path='contact' element={<Contact></Contact>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='registration' element={<Registration></Registration>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+          <Route index element={<MyAppointment></MyAppointment>}></Route>
+          <Route path='review' element={<Myreview></Myreview>}></Route>
+        </Route>
 
         
       </Routes>
